@@ -3,7 +3,7 @@ package txn
 import (
 	"fmt"
 
-	"gopkg.in/mgo.v2"
+	"github.com/ReturnPath/mgo"
 	"github.com/ReturnPath/mgo/bson"
 )
 

@@ -32,7 +32,7 @@ import (
 	"time"
 
 	. "gopkg.in/check.v1"
-	"gopkg.in/mgo.v2"
+	"github.com/ReturnPath/mgo"
 	"github.com/ReturnPath/mgo/bson"
 )
 
