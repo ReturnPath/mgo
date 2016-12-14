@@ -34,7 +34,7 @@ import (
 	"fmt"
 	"sync"
 
-	"gopkg.in/mgo.v2/bson"
+	"github.com/ReturnPath/mgo/bson"
 	"gopkg.in/mgo.v2/internal/scram"
 )
 
