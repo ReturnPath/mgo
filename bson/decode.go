@@ -35,6 +35,7 @@ import (
 	"strconv"
 	"sync"
 	"time"
+	"unicode/utf8"
 )
 
 type decoder struct {
@@ -618,6 +619,9 @@ func (d *decoder) readElemTo(out reflect.Value, kind byte) (good bool) {
 	case reflect.String:
 		switch inv.Kind() {
 		case reflect.String:
+			if !utf8.ValidString(inv.String()) {
+				panic("string value is not valid utf8")
+			}
 			out.SetString(inv.String())
 			return true
 		case reflect.Slice:
